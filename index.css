@@ -32,15 +32,16 @@ header .logo{
 
 header .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 header nav{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    padding-bottom: 25px;
+    padding: 25px 30px;
+    font-weight: bold;
 
 }
 
@@ -72,4 +73,5 @@ header a:hover{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 400px;
 }
