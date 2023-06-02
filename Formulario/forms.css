@@ -40,20 +40,19 @@
     text-align: center;
     font-size: 16px;
     line-height: 40px;
-}
-
-.forms a{
-    text-decoration: none;
-    color: #fff;
-}
-
-.forms a:hover{
-    text-decoration: underline;
-    color: tomato;
+    color: #ff6347;
 }
 
 
+.form-control.ok input{
+    border: 2px solid;
+    border-color: greenyellow
+}
 
+.form-cotrol.falla input{
+    border: 2px solid;
+    border-color: #ff6347;
+}
 
 .boton{
     width: 100%;
@@ -65,3 +64,7 @@
     border-radius: 5px;
     
 }
+
+
+
+
