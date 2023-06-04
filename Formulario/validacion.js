@@ -1,15 +1,16 @@
 window.addEventListener('load', ()=> {
-    const formulario = document.querySelector('#formulario')
-    const nombre = document.getElementById('nombre')
-    const apellido = document.getElementById('apellido')
-    const email = document.getElementById('correo')
-    const pass = document.getElementById('contraseña')
+    const formulario = document.querySelector('#formulario');
+    const nombre = document.getElementById('nombre');
+    const validacion = new RegExp('^[A-Z]+$', 'i');
+    const apellido = document.getElementById('apellido');
+    const email = document.getElementById('correo');
+    const pass = document.getElementById('contraseña');
 
     formulario.addEventListener('submit', (d)=> {
         d.preventDefault();
-        validarCampos();
+        validarCampos();     
     })
-
+    
     //valindando campo Usuario
 
     function validarCampos() {
@@ -21,38 +22,56 @@ window.addEventListener('load', ()=> {
 
         if(nombreValor === '') {           
             validarFalla(nombre, 'Campo Vacio')
+            alert("Ingres un nombre");
+            nombre.focus();
+        }else if(!validacion.test(nombre.value)) {
+            validarFalla(nombre, 'El nombre no puede contener numeros');
+            nombre.focus();
         }else{
-            validarOk(nombre)
+            validarOk(nombre);
         }
 
     //valindando campo Apellido
 
         if(apellidoValor === '') {           
-            validarFalla(apellido, 'Campo Vacio')
+            validarFalla(apellido, 'Campo Vacio');
+            alert("Ingres un apellido");
+            apellido.focus();
+        }else if(!validacion.test(apellido.value)) {
+            validarFalla(apellido, 'El apellido no puede contener numeros');
+            apellido.focus();
         }else{
-            validarOk(apellido)
+            validarOk(apellido);
         } 
 
     //valindando campo email
         
         if(emailValor === '') {
-            validarFalla(email, 'Campo Vacio')
+            validarFalla(email, 'Campo Vacio');
+            alert("Ingres un Correo");
+            email.focus();
         }else if(!validarEmail(emailValor)) {
-            validarFalla(email, 'El e-mail no es valido')
+            validarFalla(email, 'El e-mail no es valido');
+            email.focus();
         }else{
-            validarOk(email)
+            validarOk(email);
         }
 
     //validando campo password
         const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/
         if(passValor === '') {
-            validarFalla(pass, 'Campo Vacio')
+            validarFalla(pass, 'Campo Vacio');
+            alert("Ingres un Password");
+            
         }else if (passValor.length < 8) {
-            validarFalla(pass, 'Debe tener 8 caracteres como minimo')
+            validarFalla(pass, 'Debe tener 8 caracteres como minimo');
+            
         }else if(!passValor.match(er)) {
-            validarFalla(pass, 'Debe tener una Mayu, una minu y un numero')
+            validarFalla(pass, 'Debe tener una Mayu, una minu y un numero');
+            
         }else{
-            validarOk(pass)
+            validarOk(pass);
+            alert("Datos Cargados Exitosamnte!")
         }
 
     }

@@ -5,6 +5,10 @@
 
 }
 
+body{
+    background: #13334c;
+}
+
 .forms{
     width: 400px;
     padding: 30px;
@@ -44,9 +48,14 @@
 }
 
 
-.form-control.ok input{
+.form-control.ok input {
     border: 2px solid;
-    border-color: greenyellow
+    border-color: greenyellow;
+    
+}
+
+.form-control.ok p{
+    visibility: hidden;
 }
 
 .form-cotrol.falla input{
@@ -63,6 +72,17 @@
     font-size: 16px;
     border-radius: 5px;
     
+}
+.form-control p{
+
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-cotrol.falla p{
+    visibility: visible;
+
 }
 
 
