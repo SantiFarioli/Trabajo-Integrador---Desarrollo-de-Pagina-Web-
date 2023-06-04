@@ -87,7 +87,7 @@ header a:hover{
     font-size: 2.5em;
 }
 
-#lanzamientos{
+#destacados{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,6 +132,16 @@ header a:hover{
 .container .carta:hover{
     transform: translateY(-15px);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+}
+
+#lanzamientos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: beige;
+    text-shadow: black -5px 5px 6px;
+    
 }
 
 
