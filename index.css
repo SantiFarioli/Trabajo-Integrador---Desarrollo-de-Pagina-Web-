@@ -143,6 +143,15 @@ header a:hover{
     text-shadow: black -5px 5px 6px;
     
 }
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ .conteiner p{
+    font-family: 'Courier New', Courier, monospace;
+}
 
 
 
