@@ -24,7 +24,7 @@ window.addEventListener('load', ()=> {
             validarFalla(nombre, 'Campo Vacio')
             alert("Ingres un nombre");
             nombre.focus();
-        }else if(!validacion.test(nombre.value)) {
+        }else if (!/^[A-Za-z\s]+$/.test(nombreValor)){
             validarFalla(nombre, 'El nombre no puede contener numeros');
             nombre.focus();
         }else{
@@ -37,7 +37,7 @@ window.addEventListener('load', ()=> {
             validarFalla(apellido, 'Campo Vacio');
             alert("Ingres un apellido");
             apellido.focus();
-        }else if(!validacion.test(apellido.value)) {
+        }else if (!/^[A-Za-z\s]+$/.test(apellidoValor)){
             validarFalla(apellido, 'El apellido no puede contener numeros');
             apellido.focus();
         }else{
